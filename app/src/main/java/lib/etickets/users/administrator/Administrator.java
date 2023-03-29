@@ -1,5 +1,8 @@
 package lib.etickets.users.administrator;
 
+import java.util.List;
+
+import lib.etickets.terminal.activationrequests.TerminalActivationRequest;
 import lib.etickets.users.generaluser.GeneralUser;
 
 public class Administrator extends GeneralUser{
