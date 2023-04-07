@@ -6,16 +6,19 @@ import java.util.List;
 import lib.etickets.ticket.Ticket;
 import lib.etickets.transporter.Transporter;
 
-
+@JsonTypeName("periodic")
 public class PeriodicTicket extends Ticket{
+
     Date startDate;
     Date endDate;
-    
+    int durationInDays;
+
     public PeriodicTicket(String name, int ticketId, boolean needsDocumentation, List<Transporter> transporters,
-            double price, Date startDate, Date endDate) {
+            double price, Date startDate, Date endDate, int durationInDays) {
         super(name, ticketId, needsDocumentation, transporters, price);
         this.startDate = startDate;
         this.endDate = endDate;
+        this.durationInDays = durationInDays;
     }
 
     public PeriodicTicket() {
@@ -36,5 +39,12 @@ public class PeriodicTicket extends Ticket{
     public void setEndDate(Date endDate) {
         this.endDate = endDate;
     }
-    
+
+    public int getDurationInDays() {
+        return durationInDays;
+    }
+
+    public void setDurationInDays(int durationInDays) {
+        this.durationInDays = durationInDays;
+    }
 }

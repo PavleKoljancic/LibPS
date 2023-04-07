@@ -6,7 +6,7 @@ import lib.etickets.ticket.Ticket;
 import lib.etickets.transporter.Transporter;
 
 
-
+@JsonTypeName("amount")
 public class AmountTicket extends Ticket{
     int amountOfUsage;
 
