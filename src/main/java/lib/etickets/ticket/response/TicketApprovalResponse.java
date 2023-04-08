@@ -1,18 +1,18 @@
 package lib.etickets.ticket.response;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 import lib.etickets.ticket.Ticket;
 
 public class TicketApprovalResponse {
 
-    Date date;
+    LocalDate date;
     String comment;
     boolean approved;
     Ticket requestedTicket;
     String supervizorName;
     
-    public TicketApprovalResponse(Date date, String comment, boolean approved, Ticket requestedTicket,
+    public TicketApprovalResponse(LocalDate date, String comment, boolean approved, Ticket requestedTicket,
             String supervizorName) {
         this.date = date;
         this.comment = comment;
@@ -21,11 +21,11 @@ public class TicketApprovalResponse {
         this.supervizorName = supervizorName;
     }
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 
