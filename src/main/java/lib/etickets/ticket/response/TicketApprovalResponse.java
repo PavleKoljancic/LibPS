@@ -6,6 +6,7 @@ import lib.etickets.ticket.Ticket;
 
 public class TicketApprovalResponse {
 
+    User userId;
     LocalDate date;
     String comment;
     boolean approved;
@@ -13,12 +14,21 @@ public class TicketApprovalResponse {
     String supervizorName;
     
     public TicketApprovalResponse(LocalDate date, String comment, boolean approved, Ticket requestedTicket,
-            String supervizorName) {
+            String supervizorName, String userId) {
         this.date = date;
         this.comment = comment;
         this.approved = approved;
         this.requestedTicket = requestedTicket;
         this.supervizorName = supervizorName;
+        this.userId = userId;
+    }
+
+    public String getUserId(){
+        return userId;
+    }
+
+    public void setUserId(String userId){
+        this.userId = userId;
     }
 
     public LocalDate getDate() {

@@ -8,17 +8,17 @@ import lib.etickets.ticket.Ticket;
 public class TicketRequest {
     public String ticketRequestId;
     public String userId;
-    public Ticket requestedTicket;
+    public String requestedTicketId;
     Document document;
 
     public TicketRequest() {
     }
 
-    public TicketRequest(String ticketRequestId, String userId, Ticket requestedTicket, Document document) {
+    public TicketRequest(String ticketRequestId, String userId, Ticket requestedTicketId, Document document) {
         this.ticketRequestId = ticketRequestId;
         this.userId = userId;
         this.document = document;
-        this.requestedTicket = requestedTicket;
+        this.requestedTicketId = requestedTicketId;
     }
 
     public String getUserId() {
@@ -27,10 +27,10 @@ public class TicketRequest {
     public void setUserId(String userID) {
         this.userId = userID;
     }
-    public Ticket getRequestedTicket() {
-        return requestedTicket;
+    public String getRequestedTicketId() {
+        return requestedTicketId;
     }
-    public void setRequestedTicket(Ticket requestedTicket) {
+    public void setRequestedTicketId(String requestedTicketId) {
         this.requestedTicket = requestedTicket;
     }
 
