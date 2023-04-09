@@ -12,9 +12,9 @@ import lib.etickets.transporter.Transporter;
 public class AmountTicket extends Ticket{
     int amountOfUsage;
 
-    public AmountTicket(String name, int ticketId, boolean needsDocumentation, List<Transporter> transporters,
-            double price, int amountOfUsage) {
-        super(name, ticketId, needsDocumentation, transporters, price);
+    public AmountTicket(String name, String ticketId, boolean needsDocumentation, List<Transporter> transporters,
+            double price, String ticketType, int amountOfUsage) {
+        super(name, ticketId, needsDocumentation, transporters, price, ticketType);
         this.amountOfUsage = amountOfUsage;
     }
 

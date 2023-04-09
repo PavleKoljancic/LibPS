@@ -1,6 +1,6 @@
 package lib.etickets.transactions;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 
 /*@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type", visible = true)

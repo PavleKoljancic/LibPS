@@ -2,8 +2,6 @@ package lib.etickets.ticket.requests;
 
 import org.w3c.dom.Document;
 
-import lib.etickets.ticket.Ticket;
-
 
 public class TicketRequest {
     public String ticketRequestId;
@@ -31,7 +29,7 @@ public class TicketRequest {
         return requestedTicketId;
     }
     public void setRequestedTicketId(String requestedTicketId) {
-        this.requestedTicket = requestedTicket;
+        this.requestedTicketId = requestedTicketId;
     }
 
     public Document getDocument() {
