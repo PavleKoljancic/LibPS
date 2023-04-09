@@ -29,6 +29,7 @@ public abstract class Ticket {
         this.ticketType = ticketType;
     }
 
+    
     public Ticket() {
     }
 
