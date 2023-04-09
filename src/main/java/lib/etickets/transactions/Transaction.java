@@ -9,12 +9,12 @@ import java.util.Date;
 public abstract class Transaction {
     String userId;
     double amount;
-    Date date;
+    LocalDate date;
 
     public Transaction() {
     }
     
-    public Transaction(String userId, double amount, Date date) {
+    public Transaction(String userId, double amount, LocalDate date) {
         this.userId = userId;
         this.amount = amount;
         this.date = date;
@@ -36,11 +36,11 @@ public abstract class Transaction {
         this.amount = amount;
     }
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 }

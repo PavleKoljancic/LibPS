@@ -12,21 +12,32 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 @JsonSubTypes({@JsonSubTypes.Type(value = AmountTicket.class, name = "amount"),
         @JsonSubTypes.Type(value = PeriodicTicket.class, name = "periodic")})
 public abstract class Ticket {
+
+    String ticketType;
     String name;
-    int ticketId;
+    String ticketId;
     boolean needsDocumentation;
     List<Transporter> transporters;
     double price;
 
-    public Ticket(String name, int ticketId, boolean needsDocumentation, List<Transporter> transporters, double price) {
+    public Ticket(String name, String ticketId, boolean needsDocumentation, List<Transporter> transporters, double price, String ticketType) {
         this.name = name;
         this.ticketId = ticketId;
         this.needsDocumentation = needsDocumentation;
         this.transporters = transporters;
         this.price = price;
+        this.ticketType = ticketType;
     }
 
     public Ticket() {
+    }
+
+    public String getTicketType(){
+        return ticketType;
+    }
+
+    public void setTicketType(String ticketType){
+        this.ticketType = ticketType;
     }
 
     public String getName() {
@@ -37,11 +48,11 @@ public abstract class Ticket {
         this.name = name;
     }
 
-    public int getTicketId() {
+    public String getTicketId() {
         return ticketId;
     }
 
-    public void setTicketId(int ticketId) {
+    public void setTicketId(String ticketId) {
         this.ticketId = ticketId;
     }
 

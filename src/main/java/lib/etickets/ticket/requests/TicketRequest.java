@@ -14,7 +14,7 @@ public class TicketRequest {
     public TicketRequest() {
     }
 
-    public TicketRequest(String ticketRequestId, String userId, Ticket requestedTicketId, Document document) {
+    public TicketRequest(String ticketRequestId, String userId, String requestedTicketId, Document document) {
         this.ticketRequestId = ticketRequestId;
         this.userId = userId;
         this.document = document;

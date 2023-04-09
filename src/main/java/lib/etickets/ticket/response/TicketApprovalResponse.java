@@ -6,29 +6,19 @@ import lib.etickets.ticket.Ticket;
 
 public class TicketApprovalResponse {
 
-    User userId;
     LocalDate date;
     String comment;
     boolean approved;
     Ticket requestedTicket;
-    String supervizorName;
-    
+    String supervisorName;
+
     public TicketApprovalResponse(LocalDate date, String comment, boolean approved, Ticket requestedTicket,
-            String supervizorName, String userId) {
+            String supervisorName) {
         this.date = date;
         this.comment = comment;
         this.approved = approved;
         this.requestedTicket = requestedTicket;
-        this.supervizorName = supervizorName;
-        this.userId = userId;
-    }
-
-    public String getUserId(){
-        return userId;
-    }
-
-    public void setUserId(String userId){
-        this.userId = userId;
+        this.supervisorName = supervisorName;
     }
 
     public LocalDate getDate() {
@@ -63,11 +53,11 @@ public class TicketApprovalResponse {
         this.requestedTicket = requestedTicket;
     }
 
-    public String getSupervizorName() {
-        return supervizorName;
+    public String getSupervisorName() {
+        return supervisorName;
     }
 
-    public void setSupervizorName(String supervizorName) {
-        this.supervizorName = supervizorName;
+    public void setSupervisorName(String supervisorName) {
+        this.supervisorName = supervisorName;
     }
 }

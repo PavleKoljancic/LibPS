@@ -16,9 +16,11 @@ public class PeriodicTicket extends Ticket{
     public int durationInDays;
 
     public PeriodicTicket(String name, int ticketId, boolean needsDocumentation, List<Transporter> transporters,
-            double price, int durationInDays) {
+            double price, int durationInDays, LocalDate startDate, LocalDate endDate) {
         super(name, ticketId, needsDocumentation, transporters, price);
         this.durationInDays = durationInDays;
+        this.startDate = startDate;
+        this.endDate = endDate;
     }
 
     public PeriodicTicket() {

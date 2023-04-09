@@ -7,15 +7,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 import lib.etickets.ticket.Ticket;
+import lib.etickets.ticket.response.TicketApprovalResponse;
 import lib.etickets.users.generaluser.GeneralUser;
 
 
 
 public class User extends GeneralUser{
+
     Image userImage;
     List<File> documents;
     double credit;
     List<Ticket> myTickets = new ArrayList<>();
+    List<TicketApprovalResponse> ticketApprovalResponses = new ArrayList<>();
 
     public User(String userId, String email, String firstName, String lastName, Image userImage,
             List<File> documents, double credit) {
@@ -59,5 +62,12 @@ public class User extends GeneralUser{
     public void setMyTickets(List<Ticket> myTickets) {
         this.myTickets = myTickets;
     }
+
+    public List<TicketApprovalResponse> getTicketApprovalResponses(){
+        return ticketApprovalResponses;
+    }
     
+    public void setTicketApprovalResponses(List<TicketApprovalResponse> ticketApprovalResponses){
+        this.ticketApprovalResponses = ticketApprovalResponses;
+    }
 }
