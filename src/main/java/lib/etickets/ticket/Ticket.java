@@ -67,7 +67,7 @@ public abstract class Ticket {
     public List<Transporter> getTransporters() {
         return transporters;
     }
-
+    //
     public void setTransporters(List<Transporter> transporters) {
         this.transporters = transporters;
     }
