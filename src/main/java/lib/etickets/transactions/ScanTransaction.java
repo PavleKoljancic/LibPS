@@ -1,6 +1,6 @@
 package lib.etickets.transactions;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class ScanTransaction extends Transaction{
     String terminalId;
@@ -8,7 +8,7 @@ public class ScanTransaction extends Transaction{
     public ScanTransaction() {
     }
 
-    public ScanTransaction(String userId, double amount, Date date, String terminalId) {
+    public ScanTransaction(String userId, double amount, LocalDate date, String terminalId) {
         super(userId, amount, date);
         this.terminalId = terminalId;
     }

@@ -1,6 +1,6 @@
 package lib.etickets.transactions;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 //@JsonTypeName("creditTr")
 public class CreditTransaction extends Transaction{
@@ -9,7 +9,7 @@ public class CreditTransaction extends Transaction{
     public CreditTransaction() {
     }
 
-    public CreditTransaction(String userId, double amount, Date date, String supervisorId) {
+    public CreditTransaction(String userId, double amount, LocalDate date, String supervisorId) {
         super(userId, amount, date);
         this.supervisorId = supervisorId;
     }
