@@ -23,6 +23,13 @@ dependencies {
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:31.1-jre'
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.13.4'
+
+    compileOnly 'org.projectlombok:lombok:1.18.26'
+	annotationProcessor 'org.projectlombok:lombok:1.18.26'
+	
+	testCompileOnly 'org.projectlombok:lombok:1.18.26'
+	testAnnotationProcessor 'org.projectlombok:lombok:1.18.26'
+    implementation 'jakarta.validation:jakarta.validation-api:3.0.2'
 }
 
 application {
